@@ -47,8 +47,7 @@ Feature: System Python
 
   @feature
   Scenario: dnf depends on system python
-      Given dnf and it's dependencies depend on system python
-       When dnf is installed
-        And python3 and python3-libs is removed
+      Given dnf, python3 and python3-libs are installed
+       When python3 and python3-libs are removed
        Then dnf is not removed
         And dnf still works
