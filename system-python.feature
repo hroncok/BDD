@@ -1,4 +1,6 @@
 Feature: System Python
+  https://fedoraproject.org/wiki/Changes/System_Python
+
   Separate several subpackages from the python3 packages -
   a system-python(-libs) that can be required by various tools
   that consider themselves "system tools".
