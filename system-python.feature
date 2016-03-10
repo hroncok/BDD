@@ -10,27 +10,27 @@ Feature: System Python
 
   Scenario: system-python-libs
       Given system-python-libs package
-       When it's contents is examined
+       When its contents is examined
        Then it contains an undefined subset of standard Python 3 library
         And it does not contain asyncio
 
   Scenario: system-python
       Given system-python package
-       When it's contents and metadata are examined
+       When its contents and metadata are examined
        Then it contains a Python 3 interpreter in /usr/libexec/system-python
         And it can interpret Python 3 code
         And it provides system-python(abi)
 
   Scenario: python3-libs
       Given python3-libs package
-       When it's contents and metadata are examined
+       When its contents and metadata are examined
        Then it contains a remaining set of standard Python 3 library
         And it contains asyncio
         And it requires system-python-libs
 
   Scenario: python3
       Given python3 package
-       When it's metadata are examined
+       When its metadata are examined
        Then it requires python3-libs
         And it provides python(abi)
 
