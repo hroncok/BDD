@@ -45,7 +45,7 @@ Feature: System Python
        Then the resulting binary RPM does not require python(abi) = 3.x
         But it requires system-python(abi) = 3.x instead
 
-  @feature
+  @future
   Scenario: dnf depends on system python
       Given dnf, python3 and python3-libs are installed
        When python3 and python3-libs are removed
